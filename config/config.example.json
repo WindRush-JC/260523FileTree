@@ -1,0 +1,22 @@
+{
+  "root_path": ".",
+  "output_dir": "./output",
+  "max_depth": 5,
+  "ignore_hidden": false,
+  "ignore_dirs": [
+    ".stfolder",
+    ".git",
+    "__pycache__",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".venv",
+    "venv",
+    "node_modules",
+    "build",
+    "dist"
+  ],
+  "ignore_exts": [
+    ".pyc"
+  ]
+}

@@ -1,0 +1,10 @@
+/docs/Records.md export-ignore
+/docs/Todo.md export-ignore
+/docs/Understanding.md export-ignore
+/docs/Notes.md export-ignore
+/packaging/** export-ignore
+/.vscode/ export-ignore
+/.agents/ export-ignore
+/.claude/ export-ignore
+/.reasonix/ export-ignore
+/.codex/ export-ignore
