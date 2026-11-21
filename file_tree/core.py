@@ -31,10 +31,15 @@ LAST_BRANCH = "└── "
 
 def _terminal_safe_text(text: str) -> str:
     """按当前终端编码转换文本，无法显示的字符使用 Unicode 转义。"""
+    # 打包成 EXE 后 stdout 只剩 ASCII 编码名，此时按系统首选编码处理，
+    # 中文 Windows 为 GBK；否则整棵字符树都会被转义成 \u251c 之类。
     encoding = getattr(sys.stdout, "encoding", None)
-    if not encoding:
+    if not encoding or encoding.lower().replace("-", "") == "ascii":
+        encoding = "mbcs" if sys.platform == "win32" else "utf-8"
+    try:
+        return text.encode(encoding, errors="backslashreplace").decode(encoding)
+    except LookupError:
         return text
-    return text.encode(encoding, errors="backslashreplace").decode(encoding)
 
 
 class TreeGenerator:

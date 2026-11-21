@@ -106,6 +106,18 @@ python -m file_tree.dedicated
 }
 ```
 
+## 直接下载可执行文件
+
+如果不方便安装 Python，可以到 [Releases](https://github.com/WindRush-JC/260523FileTree/releases) 下载打包好的 Windows 单文件程序：
+
+| 文件 | 说明 |
+|---|---|
+| `filetree_gui.exe` | Tkinter 图形界面，日常使用的主入口 |
+| `filetree_cli_simple.exe` | 交互式和参数式 CLI |
+| `filetree_exe.zip` | 上面两个程序的压缩包 |
+
+> 专用版 `dedicated.exe` 会把本机配置一起打包进去，仅适合自己本地使用，不提供公开下载。
+
 ## Windows 一键运行
 
 `tests/` 提供三个可直接双击的辅助脚本：
