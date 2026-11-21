@@ -92,7 +92,9 @@ GUI 使用 Tkinter，左侧为配置区，右侧为可滚动预览区。默认�
 - `packaging/` 保存三个本机 PyInstaller spec，其中 GUI spec 包含当前本机 Tkinter 路径。
 - 专用版 spec 将 `config/config.local.json` 嵌入单文件 EXE。
 - `packaging/`、开发记录、私人笔记和辅助工具通过 `export-ignore` 或 `.gitignore` 排除，不进入公开副本。
-- 当前 `dist/` 中的旧 EXE 早于最近的 GUI、忽略语义和 CLI 改动，发布前必须重新打包和验证。
+- 2026-08-28 使用 Python 3.13.9、PyInstaller 6.20.0 生成 `cli_simple.exe`、`gui.exe` 和 `dedicated.exe`；当时 CLI 与专用版实际运行返回 `0`，GUI 启动五秒未闪退。
+- 三个 EXE 随 `v1.0.0` Release 以 `filetree_exe.zip` 提供下载；本地 `build/`、`dist/` 目录已在 2026-11-21 清理，需要时按 `packaging/` 中的 spec 重新打包。
+- 构建时出现未使用的 NumPy hook 和 `libmpdec-4.dll` 警告，三个产物的实际验证均未受影响。
 
 ## 7. 测试与已知限制
 

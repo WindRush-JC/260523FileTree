@@ -134,6 +134,8 @@ python -m file_tree.dedicated
 │   ├── test_core.py
 │   ├── test_entry_modes.py
 │   └── run_*.bat
+├── CHANGELOG.md                # 版本记录
+├── CONTRIBUTING.md             # 贡献指南
 ├── LICENSE
 └── README.md
 ```
@@ -171,7 +173,11 @@ python -m unittest discover -s tests -v
 
 ## 交流与反馈
 
-这是一个由实际使用需求逐步迭代的小型 DIY 项目。如果你发现问题、有新的使用场景，或者对目录过滤和输出格式有改进建议，欢迎通过 GitHub Issues 交流。
+这是一个由实际使用需求逐步迭代的小型 DIY 项目。
+
+- 发现问题或有新的使用场景：欢迎提交 [Issue](https://github.com/WindRush-JC/260523FileTree/issues)。
+- 想改代码：请先看 [贡献指南](CONTRIBUTING.md)。
+- 历史版本变更：见 [版本记录](CHANGELOG.md)。
 
 ## License
 
